@@ -1,0 +1,142 @@
+:root {
+    --red: #ff4d4d;
+    --yellow: #fffa65;
+    --green: #32ff7e;
+    --purple: #7d5fff;
+    --bg-color: #1a1a2e;
+}
+
+body {
+    text-align: center;
+      background-color: var(--bg-color);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+h2 {
+    font-weight: 300;
+    color: #a2a2d0;
+    margin-bottom: 30px;
+}
+
+.btn {
+    height: 200px;
+    width: 200px;
+    border: 5px solid black;
+    margin: 2rem;
+    align-content: center;
+}
+
+.green {
+border-top-right-radius: 50%;
+}
+
+.red {
+    border-top-left-radius: 50%;
+}
+
+.yellow {
+        border-bottom-left-radius: 50%;
+}
+
+.purple {
+    border-bottom-right-radius: 50%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.red {
+    background-color:#E63946 ;
+}
+
+.yellow {
+    background-color:#F4A261 ;
+}
+
+.green {
+    background-color:  #2A9D8F;
+}
+
+.purple {
+    background-color: #457B9D;;
+}
+
+.flash {
+    background-color: white;
+}
+
+.userflash {
+    background-color:salmon;
+}
+
+.btn.active {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px 2px rgba(16, 79, 84, 0.7); 
+    transition: .1s;
+}
+
+
+
+/* Container for the 2x2 Grid */
+.btn-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: #16213e;
+    border-radius: 50%; /* Makes the whole set circular */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    margin-bottom: 32px;
+    
+}
+
+.btn {
+    height: 180px;
+    width: 180px;
+    border: 8px solid #0f3460;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Individual Color Styling */
+.red { background-color: var(--red); border-top-left-radius: 100%; }
+.yellow { background-color: var(--yellow); border-top-right-radius: 100%; }
+.green { background-color: var(--green); border-bottom-left-radius: 100%; }
+.purple { background-color: var(--purple); border-bottom-right-radius: 100%; }
+
+/* Hover effect */
+.btn:hover {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+}
+
+/* Flash Animations */
+.flash {
+    background-color: white !important;
+    box-shadow: 0 0 40px white;
+}
+
+.userflash {
+    background-color: #ffffff;
+    box-shadow: 0 0 60px #ffffff;
+    transform: scale(0.95);
+}
+
+/* Body Flash for Game Over */
+.game-over-flash {
+    background-color: rgba(255, 0, 0, 0.4) !important;
+}
